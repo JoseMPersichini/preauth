@@ -7,5 +7,5 @@ def checkNumber(m, n):
 
     return []
 
-resultado = checkNumber([6], 6)
+resultado = checkNumber([3,5,2,7,0,6], 6)
 print(resultado)
