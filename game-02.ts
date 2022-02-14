@@ -10,7 +10,7 @@ export class Item {
     }
 }
 
-class NormalItem extends Item {
+export class NormalItem extends Item {
     updateSellIn() {
         this.sellIn = this.sellIn - 1;
     }
@@ -27,7 +27,7 @@ class NormalItem extends Item {
     }
 }
 
-class Sulfuras extends NormalItem {
+export class Sulfuras extends NormalItem {
     updateQuality() {
         console.log('Not changes');
     }
@@ -37,13 +37,13 @@ class Sulfuras extends NormalItem {
     }
 }
 
-class AgedBrie extends NormalItem {
+export class AgedBrie extends NormalItem {
     updateQuality() {
         if(this.quality < 50) this.quality = this.quality + 1;        
     }    
 }
 
-class BackstagePasses extends NormalItem {
+export class BackstagePasses extends NormalItem {
     updateQuality() {
         if(this.sellIn < 0) this.quality = 0;
         else {
@@ -56,7 +56,7 @@ class BackstagePasses extends NormalItem {
     }
 }
 
-class Conjured extends NormalItem {
+export class Conjured extends NormalItem {
     updateQuality() {
         if(this.quality > 0) this.quality = this.quality - 2;
         if(this.quality < 0) this.quality = 0;
